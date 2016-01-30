@@ -156,10 +156,6 @@ var ContactForm = React.createClass({
                 value: '',
                 require: true
             },
-            company:{
-                title: 'Empresa',
-                value: ''
-            },
             tel: {
                 title: 'Teléfono',
                 value: '',

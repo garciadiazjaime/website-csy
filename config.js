@@ -6,7 +6,7 @@ var config = convict({
     email: {
       doc: 'default contact email',
       format: String,
-      default: 'info@csy.mx'
+      default: 'arturo@csy.mx'
     },
     ipaddress: {
         doc: 'IP the application runs on',
