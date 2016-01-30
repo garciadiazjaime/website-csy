@@ -1,0 +1,33 @@
+$blue-arrow: -473px -78px 5px 7px
+$facebook: -460px -78px 5px 9px
+$icon: -312px -78px 38px 38px
+$logo-bck: -4px -129px 269px 104px
+$logo-footer: -312px -4px 185px 66px
+$logo: -4px -4px 300px 117px
+$orange-arrow-down: -408px -78px 29px 15px
+$orange-arrow-left: -358px -78px 17px 30px
+$orange-arrow-right: -383px -78px 17px 30px
+$white-arrow: -445px -78px 7px 9px
+
+=sprite-width($sprite)
+  width: nth($sprite, 3)
+
+=sprite-height($sprite)
+  height: nth($sprite, 4)
+
+=sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 1)
+  $sprite-offset-y: nth($sprite, 2)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+=sprite($sprite)
+  +sprite-position($sprite)
+  background-repeat: no-repeat
+  overflow: hidden
+  display: block
+  +sprite-width($sprite)
+  +sprite-height($sprite)
+
+.sprite-general
+  background-image: url('/img/sprites/_general.png')
+

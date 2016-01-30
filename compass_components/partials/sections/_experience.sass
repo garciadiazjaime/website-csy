@@ -1,0 +1,372 @@
+#experience-panel
+  padding-bottom: 100px
+
+  h4
+    @extend %mentone-semibold
+    text-align: center
+    font-size: 17px
+    color: white
+    text-transform: uppercase
+
+  hr
+    border-top: 2px solid $orange
+
+  ul
+    padding: 0 0 0 10px
+    margin: 0
+    text-align: center
+
+    .process-break
+      display: none
+
+    li
+      list-style: none
+      display: inline-block
+      width: 130px
+      height: 80px
+      text-align: center
+      position: relative
+      margin: 130px 0 0
+      vertical-align: top
+
+      a
+        @extend %mentone-semibold
+        color: white
+        font-size: 16px
+        opacity: 1
+
+        &:before
+          top: -110px
+          left: 20px
+
+        &:hover
+          opacity: 0.7
+          cursor: pointer
+
+      &.process-needs a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-needs-big, 1) nth($icon-needs-big, 2)
+          width: nth($icon-needs-big, 3)
+          height: nth($icon-needs-big, 4)
+
+      &.process-design a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-design-big, 1) nth($icon-design-big, 2)
+          width: nth($icon-design-big, 3)
+          height: nth($icon-design-big, 4)
+
+      &.process-documentation a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-documentation-big, 1) nth($icon-documentation-big, 2)
+          width: nth($icon-documentation-big, 3)
+          height: nth($icon-documentation-big, 4)
+
+      &.process-assembly a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-assembly-big, 1) nth($icon-assembly-big, 2)
+          width: nth($icon-assembly-big, 3)
+          height: nth($icon-assembly-big, 4)
+
+      &.process-programming a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-programming-big, 1) nth($icon-programming-big, 2)
+          width: nth($icon-programming-big, 3)
+          height: nth($icon-programming-big, 4)
+
+      &.process-installation a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-installation-big, 1) nth($icon-installation-big, 2)
+          width: nth($icon-installation-big, 3)
+          height: nth($icon-installation-big, 4)
+
+      &.process-maintenance a
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-maintenance-big, 1) nth($icon-maintenance-big, 2)
+          width: nth($icon-maintenance-big, 3)
+          height: nth($icon-maintenance-big, 4)
+
+  .learn-more
+    @extend %mentone-semibold
+    display: block
+    text-align: center
+    font-size: 12px
+    color: $orange
+    clear: both
+    padding: 60px 0 105px 0
+    text-transform: uppercase
+    position: relative
+
+    &:after
+      @extend .isDecorativeAfter
+      @extend .sprite-general
+      background-position: nth($orange-arrow-down, 1) nth($orange-arrow-down, 2)
+      width: nth($orange-arrow-down, 3)
+      height: nth($orange-arrow-down, 4)
+      top: 100px
+      left: 48.5%
+
+  .btn-contact-us
+    display: inline-block
+    background: $blue
+    border: 3px solid $orange
+    color: white
+    padding: 5px 30px 5px 10px
+    text-transform: uppercase
+    position: relative
+
+    &:after
+      @extend .isDecorativeAfter
+      width: 0
+      height: 0
+      border-top: 4px solid transparent
+      border-bottom: 4px solid transparent
+      border-left: 4px solid white
+      top: 30%
+      right: 10px
+
+  #process-panel
+    color: $blue
+    padding-bottom: 100px
+
+    >div
+      padding: 0
+      position: relative
+
+    h2
+      @extend %mentone-semibold
+      color: $blue
+      font-size: 40px
+      margin-top: 0px
+
+    h3
+      @extend %sourcesanspro-regular
+      font-size: 30px
+      margin: 0 0 40px 0
+
+    p
+      @extend %sourcesanspro-regular
+      font-size: 16px
+      padding-bottom: 60px
+
+    hr
+      width: 80px
+      display: inline-block
+
+    .process-style-a
+
+      .process-content
+        background: white
+        padding: 65px 40px 140px 50px
+
+
+    .process-style-b
+      background: #eee
+
+      .process-content
+        position: relative
+        padding: 65px 40px 100px 50px
+
+    .process-footer
+      position: relative
+
+      .btn-contact-us
+        top: 200px
+        left: 220px
+
+    .process-needs
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($icon-needs-small, 1) nth($icon-needs-small, 2)
+        width: nth($icon-needs-small, 3)
+        height: nth($icon-needs-small, 4)
+        top: -30px
+        left: 45px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($procces-01-needs, 1) nth($procces-01-needs, 2)
+          width: nth($procces-01-needs, 3)
+          height: nth($procces-01-needs, 4)
+          bottom: -115px
+          left: 0px
+
+    .process-design
+      border-top: 50px solid $blue
+      padding-top: nth($procces-02-design, 4) + 40
+
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($procces-02-design, 1) nth($procces-02-design, 2)
+        width: nth($procces-02-design, 3)
+        height: nth($procces-02-design, 4)
+        top: -50px
+        left: 47px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-design-small, 1) nth($icon-design-small, 2)
+          width: nth($icon-design-small, 3)
+          height: nth($icon-design-small, 4)
+          top: -30px
+          left: 45px
+
+    .process-documentation
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($icon-documentation-small, 1) nth($icon-documentation-small, 2)
+        width: nth($icon-documentation-small, 3)
+        height: nth($icon-documentation-small, 4)
+        top: -30px
+        left: 45px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($procces-03-documentation, 1) nth($procces-03-documentation, 2)
+          width: nth($procces-03-documentation, 3)
+          height: nth($procces-03-documentation, 4)
+          bottom: -115px
+          left: 0px
+
+    .process-assembly
+      padding-top: nth($procces-04-assembly, 4) + 100
+
+      .process-content
+        padding-bottom: 60px
+
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($procces-04-assembly, 1) nth($procces-04-assembly, 2)
+        width: nth($procces-04-assembly, 3)
+        height: nth($procces-04-assembly, 4)
+        top: 0px
+        left: 47px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-assembly-small, 1) nth($icon-assembly-small, 2)
+          width: nth($icon-assembly-small, 3)
+          height: nth($icon-assembly-small, 4)
+          top: -30px
+          left: 45px
+
+    .process-programming
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($icon-programming-small, 1) nth($icon-programming-small, 2)
+        width: nth($icon-programming-small, 3)
+        height: nth($icon-programming-small, 4)
+        top: -30px
+        left: 45px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($procces-05-programming, 1) nth($procces-05-programming, 2)
+          width: nth($procces-05-programming, 3)
+          height: nth($procces-05-programming, 4)
+          bottom: -115px
+          left: 0px
+
+    .process-installation
+      padding-top: nth($procces-06-installation, 4) + 100
+
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($procces-06-installation, 1) nth($procces-06-installation, 2)
+        width: nth($procces-06-installation, 3)
+        height: nth($procces-06-installation, 4)
+        top: 0px
+        left: 47px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($icon-installation-small, 1) nth($icon-installation-small, 2)
+          width: nth($icon-installation-small, 3)
+          height: nth($icon-installation-small, 4)
+          top: -30px
+          left: 45px
+
+    .process-maintenance
+      padding-bottom: 200px
+
+      &:before
+        @extend .isDecorative
+        @extend .sprite-experience
+        background-position: nth($icon-maintenance-small, 1) nth($icon-maintenance-small, 2)
+        width: nth($icon-maintenance-small, 3)
+        height: nth($icon-maintenance-small, 4)
+        top: -30px
+        left: 45px
+
+      .process-content
+        &:before
+          @extend .isDecorative
+          @extend .sprite-experience
+          background-position: nth($procces-07-maintenance, 1) nth($procces-07-maintenance, 2)
+          width: nth($procces-07-maintenance, 3)
+          height: nth($procces-07-maintenance, 4)
+          bottom: 50px
+          left: 0px
+
+
+    .process-closing
+      background: $orange
+      padding: 200px 50px 190px
+
+      h3
+        @extend %mentone-semibold
+        font-size: 40px
+        color: white
+        width: 390px
+        padding-bottom : 50px
+
+      a
+        display: inline-block
+        border: 3px solid white
+        padding: 8px 80px 8px 15px
+        color: white
+        text-transform: uppercase
+        position: relative
+
+        &:after
+          content: ''
+          display: inline-block
+          border-top: 5px solid transparent
+          border-left: 5px solid $blue
+          border-bottom: 5px solid transparent
+          top: 13px
+          position: absolute
+          right: 8px
+
+@import "../responsive/_experience"

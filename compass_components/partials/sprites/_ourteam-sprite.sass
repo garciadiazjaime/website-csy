@@ -1,0 +1,35 @@
+$arrow-left: -467px -257px 15px 29px
+$arrow-right: -467px -220px 15px 29px
+$arrow2-right: -326px -277px 28px 28px
+$commitment-icon: -387px -112px 100px 100px
+$great-people: -4px -4px 375px 265px
+$home-icon-white: -387px -220px 72px 74px
+$logo-SAVANT: -4px -277px 314px 36px
+$open-icon: -220px -321px 100px 100px
+$quality-icon: -112px -321px 100px 100px
+$savant-small: -4px -429px 235px 27px
+$team-icon: -387px -4px 100px 100px
+$user-icon: -4px -321px 100px 100px
+
+=sprite-width($sprite)
+  width: nth($sprite, 3)
+
+=sprite-height($sprite)
+  height: nth($sprite, 4)
+
+=sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 1)
+  $sprite-offset-y: nth($sprite, 2)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+=sprite($sprite)
+  +sprite-position($sprite)
+  background-repeat: no-repeat
+  overflow: hidden
+  display: block
+  +sprite-width($sprite)
+  +sprite-height($sprite)
+
+.sprite-ourteam
+  background-image: url('/img/sprites/_ourteam.png')
+

@@ -1,0 +1,38 @@
+$audio-icon: -1506px -507px 85px 85px
+$communication-icon: -1320px -600px 85px 85px
+$integration-icon: -1599px -507px 85px 85px
+$lighting-icon: -1320px -507px 85px 85px
+$security-icon: -1413px -507px 85px 85px
+$services-HomeTheater: -4px -796px 375px 495px
+$services-audio: -387px -796px 375px 495px
+$services-communication: -4px -4px 650px 388px
+$services-lighting: -662px -4px 650px 388px
+$services-menu: -662px -400px 624px 339px
+$services-other: -770px -796px 375px 495px
+$services-security: -1320px -4px 375px 495px
+$services-video: -4px -400px 650px 388px
+$theater-icon: -1413px -600px 85px 85px
+$video-icon: -1506px -600px 85px 85px
+
+=sprite-width($sprite)
+  width: nth($sprite, 3)
+
+=sprite-height($sprite)
+  height: nth($sprite, 4)
+
+=sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 1)
+  $sprite-offset-y: nth($sprite, 2)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+=sprite($sprite)
+  +sprite-position($sprite)
+  background-repeat: no-repeat
+  overflow: hidden
+  display: block
+  +sprite-width($sprite)
+  +sprite-height($sprite)
+
+.sprite-whatwedo
+  background-image: url('/img/sprites/_whatwedo.png')
+

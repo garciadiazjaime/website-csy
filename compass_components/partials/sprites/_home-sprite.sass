@@ -1,0 +1,35 @@
+$introduction-icon: -225px -717px 72px 74px
+$logo-20-years: -4px -717px 213px 138px
+$map: -4px -4px 879px 705px
+$service-audio: -305px -717px 54px 55px
+$service-communication: -367px -717px 54px 55px
+$service-integration: -429px -717px 54px 55px
+$service-lighting: -491px -717px 54px 55px
+$service-media: -553px -717px 54px 55px
+$service-security: -615px -717px 54px 55px
+$service-video: -677px -717px 54px 55px
+$slide-left-arrow: -739px -717px 17px 30px
+$slide-right-arrow: -764px -717px 17px 30px
+
+=sprite-width($sprite)
+  width: nth($sprite, 3)
+
+=sprite-height($sprite)
+  height: nth($sprite, 4)
+
+=sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 1)
+  $sprite-offset-y: nth($sprite, 2)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+=sprite($sprite)
+  +sprite-position($sprite)
+  background-repeat: no-repeat
+  overflow: hidden
+  display: block
+  +sprite-width($sprite)
+  +sprite-height($sprite)
+
+.sprite-home
+  background-image: url('/img/sprites/_home.png')
+

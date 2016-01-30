@@ -1,0 +1,78 @@
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/font-face"
+@import "compass/css3/images"
+@import "compass/css3/opacity"
+@import "compass/css3/transform"
+@import "compass/css3/transition"
+
+@import "compass/utilities/sprites"
+
+/* ***************** SPRITES ************** */
+
+@import "_icons"
+@import "sprites/_general-sprite"
+@import "sprites/_home-sprite"
+@import "sprites/_ourteam-sprite"
+@import "sprites/_whatwedo-sprite"
+@import "sprites/_experience-sprite"
+@import "sprites/_contact-sprite"
+
+/* ***************** VARIABLES ************** */
+
+$img: "img/"
+
+$blue: #333d47
+$orange: #f98c29
+$gray: #5c666f
+$dark-gray: #333e48
+$width: 1024px
+
+
+/* ***************** DEFAULTS ************** */
+
+@import "partials/_loader"
+
+/* ****************** FONTFACE ************** */
+
+@include font-face('sourcesanspro-regular', font-files( 'sourcesanspro-regular.woff', woff, 'sourcesanspro-regular.ttf', ttf, 'sourcesanspro-regular.svg', svg), 'sourcesanspro-regular.eot')
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic)
+
+/* @include font-face('sourcesanspro-italic', font-files( 'sourcesanspro-italic.woff', woff, 'sourcesanspro-italic.ttf', ttf, 'sourcesanspro-italic.svg', svg), 'sourcesanspro-italic.eot') */
+
+@include font-face('sourcesanspro-semibold', font-files( 'sourcesanspro-semibold.woff', woff, 'sourcesanspro-semibold.ttf', ttf, 'sourcesanspro-semibold.svg', svg), 'sourcesanspro-semibold.eot')
+
+@include font-face('sourcesanspro-bold', font-files( 'sourcesanspro-bold.woff', woff, 'sourcesanspro-bold.ttf', ttf, 'sourcesanspro-bold.svg', svg), 'sourcesanspro-bold.eot')
+
+@include font-face('sourcesanspro-extralight', font-files( 'sourcesanspro-extralight.woff', woff, 'sourcesanspro-extralight.ttf', ttf, 'sourcesanspro-extralight.svg', svg), 'sourcesanspro-extralight.eot')
+
+@include font-face('mentone-semibold', font-files( 'mentone-semibold.woff', woff, 'mentone-semibold.ttf', ttf, 'mentone-semibold.svg', svg), 'mentone-semibold.eot')
+
+
+%sourcesanspro-regular
+	font-family: "sourcesanspro-regular", Verdana, sans-serif
+	font-weight: normal
+
+%sourcesanspro-italic
+	font-family: "Source Sans Pro", Verdana, sans-serif
+	font-weight: normal
+
+%sourcesanspro-semibold
+	font-family: "sourcesanspro-semibold", Arial, sans-serif
+	font-weight: normal
+
+%sourcesanspro-bold
+	font-family: "sourcesanspro-bold", Arial, sans-serif
+	font-weight: normal
+
+%sourcesanspro-extralight
+	font-family: "sourcesanspro-extralight", Verdana, sans-serif
+	font-weight: normal
+
+%mentone-semibold
+	font-family: "mentone-semibold", Verdana, sans-serif
+	font-weight: normal
+
+
+@import "_mixins"

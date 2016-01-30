@@ -1,0 +1,44 @@
+$icon-assembly-big: -462px -620px 93px 93px
+$icon-assembly-small: -462px -721px 64px 64px
+$icon-design-big: -765px -620px 93px 93px
+$icon-design-small: -750px -721px 64px 64px
+$icon-documentation-big: -664px -620px 93px 93px
+$icon-documentation-small: -678px -721px 64px 64px
+$icon-installation-big: -866px -620px 93px 93px
+$icon-installation-small: -606px -721px 64px 64px
+$icon-maintenance-big: -563px -620px 93px 93px
+$icon-maintenance-small: -534px -721px 64px 64px
+$icon-needs-big: -1068px -620px 93px 93px
+$icon-needs-small: -1241px -620px 64px 64px
+$icon-programming-big: -967px -620px 93px 93px
+$icon-programming-small: -1169px -620px 64px 64px
+$procces-01-needs: -4px -620px 450px 300px
+$procces-02-design: -920px -312px 450px 300px
+$procces-03-documentation: -920px -4px 450px 300px
+$procces-04-assembly: -462px -312px 450px 300px
+$procces-05-programming: -4px -312px 450px 300px
+$procces-06-installation: -462px -4px 450px 300px
+$procces-07-maintenance: -4px -4px 450px 300px
+
+=sprite-width($sprite)
+  width: nth($sprite, 3)
+
+=sprite-height($sprite)
+  height: nth($sprite, 4)
+
+=sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 1)
+  $sprite-offset-y: nth($sprite, 2)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+=sprite($sprite)
+  +sprite-position($sprite)
+  background-repeat: no-repeat
+  overflow: hidden
+  display: block
+  +sprite-width($sprite)
+  +sprite-height($sprite)
+
+.sprite-experience
+  background-image: url('/img/sprites/_experience.png')
+

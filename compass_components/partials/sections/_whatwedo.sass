@@ -1,0 +1,320 @@
+#whatwedo
+
+  #banner
+    background-image: url('img/whatwedo/banner.jpg')
+
+  #intro
+    @extend %sourcesanspro-regular
+    padding-top: 183px
+    color: $dark-gray
+    font-size: 18px
+    position: relative
+    padding-left: 50px
+    padding-right: 50px
+
+    h2
+      @extend %mentone-semibold
+      padding-bottom: 30px
+      font-size: 40px
+
+    hr
+      height: 4px
+      width: 100px
+      background: $orange
+      margin: 0
+      margin-bottom: 50px
+
+    .right-column
+      bottom: 100px
+
+      ul
+        li
+          @extend %mentone-semibold
+          list-style: none
+          font-size: 40px
+          color: $orange
+          line-height: 60px
+          text-transform: uppercase
+          position: relative
+
+          &:before
+            content: ''
+            width: 18px
+            height: 18px
+            border: 2px solid $gray
+            display: inline-block
+            @include border-radius(10px)
+            position: relative
+            bottom: 6px
+            right: 15px
+
+  #services-menu
+    margin-top: 50px
+    @extend .sprite-whatwedo
+    background-position: nth($services-menu, 1) nth($services-menu, 2)
+    width: nth($services-menu, 3)
+    height: nth($services-menu, 4)
+    position: relative
+
+    li
+      list-style: none
+
+      a
+        cursor: pointer
+        color: $orange
+        display: block
+        font-size: 18px
+
+        &:hover
+          color: $blue
+
+    #left-column
+      position: relative
+      right: 330px
+      line-height: 86px
+
+      a
+        text-align: right
+
+    #right-column
+      position: relative
+      left: 258px
+      line-height: 132px
+      top: -28px
+
+      a
+        padding-left: 26px
+
+  #intro-services
+    @extend %mentone-semibold
+    color: white
+    background: $blue
+    font-size: 40px
+    padding: 82px 100px 0 100px
+    line-height: 40px
+    margin-top: 150px
+    height: 323px
+
+    .right-column
+      text-align: center
+
+      &:before
+        content: ''
+        @extend .sprite-ourteam
+        background-position: nth($home-icon-white, 1) nth($home-icon-white, 2)
+        width: nth($home-icon-white, 3)
+        height: nth($home-icon-white, 4)
+        display: block
+        margin: 0 auto
+
+      a
+        margin-left: 58px
+        margin-top: 50px
+
+  .blue-background
+
+    .container
+      padding-left: 0px
+
+  #blue-block
+    @extend .blue-background
+    height: 200px
+    margin-top: -200px
+
+  #services-panel
+    padding-bottom: 100px
+
+    .service-card
+
+      h2
+        @extend %mentone-semibold
+        color: $orange
+        font-size: 40px
+        position: relative
+
+        &:before
+          content: ''
+          display: inline-block
+          @extend .sprite-whatwedo
+          position: absolute
+          left: -95px
+          top: -25px
+
+        &.audio-icon
+          &:before
+            background-position: nth($audio-icon, 1) nth($audio-icon, 2)
+            width: nth($audio-icon, 3)
+            height: nth($audio-icon, 4)
+
+        &.theater-icon
+          &:before
+            background-position: nth($theater-icon, 1) nth($theater-icon, 2)
+            width: nth($theater-icon, 3)
+            height: nth($theater-icon, 4)
+
+        &.security-icon
+          &:before
+            background-position: nth($security-icon, 1) nth($security-icon, 2)
+            width: nth($security-icon, 3)
+            height: nth($security-icon, 4)
+
+        &.video-icon
+          &:before
+            background-position: nth($video-icon, 1) nth($video-icon, 2)
+            width: nth($video-icon, 3)
+            height: nth($video-icon, 4)
+
+        &.communication-icon
+          &:before
+            background-position: nth($communication-icon, 1) nth($communication-icon, 2)
+            width: nth($communication-icon, 3)
+            height: nth($communication-icon, 4)
+
+        &.lighting-icon
+          &:before
+            background-position: nth($lighting-icon, 1) nth($lighting-icon, 2)
+            width: nth($lighting-icon, 3)
+            height: nth($lighting-icon, 4)
+
+        &.other-icon
+          &:before
+            background-position: nth($integration-icon, 1) nth($integration-icon, 2)
+            width: nth($integration-icon, 3)
+            height: nth($integration-icon, 4)
+
+      h3
+        @extend %sourcesanspro-regular
+        font-size: 30px
+        color: $blue
+        margin-top: 8px
+
+      hr
+        height: 3px
+        background-color: $orange
+        width: 80px
+        display: inline-block
+
+      p
+        @extend %sourcesanspro-regular
+        font-size: 16px
+        color: $blue
+
+      b
+        @extend %sourcesanspro-bold
+        font-size: 18px
+        color: $blue
+
+
+      &.service-style-a
+
+        .service-image
+          div
+            &:before
+              @extend .sprite-whatwedo
+              content: ''
+              display: block
+              z-index: 1
+              position: relative
+              top: 50px
+
+          .service-audio
+            &:before
+              background-position: nth($services-audio, 1) nth($services-audio, 2)
+              width: nth($services-audio, 3)
+              height: nth($services-audio, 4)
+
+          .service-theater
+            &:before
+              background-position: nth($services-HomeTheater, 1) nth($services-HomeTheater, 2)
+              width: nth($services-HomeTheater, 3)
+              height: nth($services-HomeTheater, 4)
+
+          .service-security
+            &:before
+              background-position: nth($services-security, 1) nth($services-security, 2)
+              width: nth($services-security, 3)
+              height: nth($services-security, 4)
+
+          .service-other
+            &:before
+              background-position: nth($services-other, 1) nth($services-other, 2)
+              width: nth($services-other, 3)
+              height: nth($services-other, 4)
+
+        .service-no-background
+          background: $blue
+          height: 88px
+          border-right: 92px solid $gray
+
+        .service-content
+          background: white
+          border-left: 30px solid $blue
+
+          .service-text
+            height: nth($services-audio, 4)
+            padding: 100px 0 65px 35px
+
+        .blue-blackground
+          background: $gray
+          height: 88px
+
+        .service-footer
+          position: relative
+          @extend .blue-blackground
+          padding-left: 40px
+
+          a
+            position: relative
+            top: 25px
+
+        .no-width
+          width: 0
+
+      &.service-style-b
+        margin: 50px 0 0 15px
+
+        .service-content
+          background: white
+          padding: 70px 55px 65px 135px
+          position: relative
+
+        .service-image
+          padding: 0
+
+          div
+            content: ''
+            @extend .sprite-whatwedo
+            display: block
+            z-index: 1
+            position: relative
+            bottom: 50px
+
+            &.service-video
+              background-position: nth($services-video, 1) nth($services-video, 2)
+              width: nth($services-video, 3)
+              height: nth($services-video, 4)
+
+            &.service-communication
+              background-position: nth($services-communication, 1) nth($services-communication, 2)
+              width: nth($services-communication, 3)
+              height: nth($services-communication, 4)
+
+            &.service-lighting
+              background-position: nth($services-lighting, 1) nth($services-lighting, 2)
+              width: nth($services-lighting, 3)
+              height: nth($services-lighting, 4)
+
+        .service-aside
+          position: relative
+
+          div
+            position: absolute
+            bottom: 0px
+            right: 0px
+            height: 200px
+            background: $gray
+            width: 100%
+            text-align: center
+            padding-top: 60px
+
+@import "../responsive/_whatwedo"

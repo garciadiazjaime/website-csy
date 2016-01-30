@@ -1,0 +1,378 @@
+@import "partials/_setup"
+@import "partials/_reset"
+
+/* ****************** GENERAL ************** */
+
+html, body
+  background: white
+  height: 100%
+
+body
+  @extend %sourcesanspro-regular
+  font-size: 14px
+  letter-spacing: 0.07em
+  line-height: 1.4em
+  padding: 0
+
+a
+  font-weight: normal
+
+  &:hover, &:focus, &:active
+    text-decoration: none
+
+em
+  font-style: normal
+
+h1, h2
+  font-size: 23px
+  color: $orange
+/* ****************** LAYOUT ************** */
+#mainContent
+  padding: 150px 0 0
+
+section
+  max-width: 100%
+  overflow: hidden
+
+.container
+  max-width: $width
+
+.hasColorBackground
+  color: white
+
+.social
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  li
+    display: inline-block
+    margin: 0 0 0 15px
+
+  li:first-child
+    margin-left: 0
+
+  a
+    background: #0074c8
+    @include border-radius(50px)
+    display: block
+    height: 24px
+    overflow: hidden
+    position: relative
+    @include transition(.4s)
+    width: 24px
+
+    &:hover, &:focus, &:active
+      background: darken(#0074c8, 10)
+      @include transition(.4s)
+
+  span
+    @extend .sprite-general
+    background-position: nth($facebook, 1) nth($facebook, 2)
+    width: nth($facebook, 3)
+    height: nth($facebook, 4)
+    display: block
+    margin: 7px auto 0
+    line-height: 5000em
+    overflow: hidden
+
+.button
+  @extend %sourcesanspro-bold
+  color: white
+  display: inline-block
+  font-size: 13px
+  padding: 0px 30px 0px 12px
+  position: relative
+  text-transform: uppercase
+  border: 3px solid $orange
+  line-height: 40px
+
+  &:hover, &:focus, &:active
+    color: white
+
+  &:after
+    content: ''
+    border-top: 5px solid transparent
+    border-left: 5px solid white
+    border-bottom: 5px solid transparent
+    display: inline-block
+    top: 15px
+    position: absolute
+    right: 8px
+
+.hasColorBackground
+  color: white
+
+  a
+    color: white
+
+.fullHeightWrap
+  height: 100%
+  width: 100%
+
+.orange-text
+  color: $orange
+
+.blue-background
+  background: $blue
+
+.white-background
+  background: white
+
+/* ****************** HEADER ************** */
+header, #header
+  background: white
+  font-size: 13px
+  left: 0
+  letter-spacing: 0.07em
+  min-height: 80px
+  overflow: hidden
+  padding: 25px 0 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 50
+
+  .container
+    max-width: 975px
+    position: relative
+    text-align: right
+    z-index: 2
+
+  .social
+    position: absolute
+    right: 15px
+    top: 25px
+    z-index: 5
+
+  a
+    color: $blue
+    text-transform: uppercase
+
+    &:hover, &:focus, &:active
+      color: $blue
+
+.mainLogoStyle
+  @extend .sprite-general
+  background-position: nth($logo, 1) nth($logo, 2)
+  width: nth($logo, 3)
+  height: nth($logo, 4)
+  display: block
+  line-height: 5000em
+  overflow: hidden
+
+.navbar-brand
+  @extend .mainLogoStyle
+  left: 15px
+  margin-left: 0
+  opacity: 1
+  padding: 0
+  position: absolute
+  top: 0
+  z-index: 5
+
+  &:hover, &:focus, &:active
+    opacity: 0.7
+
+.navbar-nav > li
+  float: none
+
+.navbar-nav > li > a
+  padding: 54px 0 57px
+
+.navbar-nav
+  padding: 0 0 0 270px
+  text-align: right
+  width: 100%
+
+  a
+    border-bottom: 3px solid white
+    color: $blue
+    display: block
+    text-align: center
+
+    &:hover, &:focus, &:active
+      color: $orange
+
+  li
+    display: inline-block
+    margin: 0 0 0 45px
+
+  li:first-child
+    margin-left: 0
+
+.navbar-default
+  .navbar-nav > li > a:hover, .navbar-nav > li > a:focus
+    border-bottom-color: $orange
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+  border-bottom-color: $orange
+
+header.fixed, #header.fixed
+  min-height: 1px
+  padding: 23px 0 0
+
+  .navbar-nav > li > a
+    padding: 10px 0 24px
+
+
+  .navbar-brand
+    @extend .sprite-general
+    background-position: nth($icon, 1) nth($icon, 2)
+    width: nth($icon, 3)
+    height: nth($icon, 4)
+
+.simple-block
+  text-align: center
+
+  h1
+    @extend %sourcesanspro-extralight
+    font-size: 85px
+    color: white
+    padding: 50px 0
+
+/* ****************** FOOTER ************** */
+footer, #footer
+  background: white
+  color: $blue
+  font-size: 13px
+  padding: 50px 0 0
+
+  .container
+    max-width: 955px
+
+  a
+    color: $blue
+    display: inline-block
+    padding: 0
+
+    &:hover, &:focus, &:active
+      color: $orange
+  ul
+    margin: 0 0 15px
+    padding: 60px 0 0
+
+    ul
+      margin-bottom: 0
+      padding: 0
+
+  ul.social
+    margin: 10px 0 15px
+    padding: 0
+
+  li
+    display: inline-block
+    vertical-align: top
+    width: 25%
+
+    li
+      display: block
+      margin: 0 0 6px
+      width: 100%
+
+  h5
+    @extend %sourcesanspro-bold
+    font-size: 14px
+    margin: 0 0 20px
+
+    a
+      @extend .isDecorative
+      display: inline-block
+      padding: 0 0 10px
+      position: relative
+
+      &:before
+        background: $orange
+        bottom: 0
+        height: 2px
+        left: 0
+        width: 85px
+
+
+  #addressColumn
+    a
+      padding: 0
+
+  .email
+    display: block
+    text-transform: none
+
+  #phoneList
+    padding: 20px 0 0
+
+    li
+      display: block
+      width: 100%
+
+    em
+      display: inline-block
+      @extend %sourcesanspro-semibold
+      min-width: 45px
+
+#footerNavigation
+  & > ul > li
+    &:first-child
+      padding: 0 30px 0 0
+      h5
+        a
+          display: block
+
+          &:before
+            width: 100%
+
+    &:first-child, &:nth-child(2)
+      width: 31%
+
+    &:nth-child(3)
+      width: 22%
+
+    &:last-child
+      width: 15%
+
+#addressColumn
+  text-align: right
+
+#footerLogo
+  @extend .sprite-general
+  background-position: nth($logo-footer, 1) nth($logo-footer, 2)
+  width: nth($logo-footer, 3)
+  height: nth($logo-footer, 4)
+  margin: 0 0 45px auto
+  display: block
+
+
+#footerCredits
+  background: $blue
+  color: white
+  font-size: 10px
+  line-height: 1em
+  padding: 12px 0 10px
+
+  a
+    color: white
+
+    &:hover, &:focus, &:active
+      color: $orange
+
+  p
+    margin: 0 0 5px
+    max-width: 100%
+
+  .col-xs-12:last-child
+    text-align: right
+
+/* ****************** SECTIONS ************** */
+
+@import "partials/sections/_home"
+@import "partials/sections/_block"
+@import "partials/sections/_ourteam"
+@import "partials/sections/_whatwedo"
+@import "partials/sections/_experience"
+@import "partials/sections/_contact"
+
+@import "partials/widgets/_carousel-widget"
+@import "partials/widgets/_banner-widget"
+
+@import "partials/responsive/_general.sass"
+@import "partials/responsive/_header.sass"
+@import "partials/responsive/_footer.sass"

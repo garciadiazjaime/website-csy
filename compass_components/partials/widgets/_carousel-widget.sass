@@ -1,0 +1,59 @@
+/* ----------- Carousel ----------- */
+#carouselWidget
+	background: black
+	color: white
+	font-size: 13px
+	height: 720px
+	margin-bottom: 20px
+
+	h1
+		color: #fff
+		font-size: 86px
+		@extend %sourcesanspro-extralight
+		margin-bottom: 70px
+
+	.slider
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		height: 720px
+
+	.item
+		padding: 165px 0 0
+
+	.carousel-indicators
+		display: none
+	.carousel-prev
+		background-image: url('/img/sprites/_general.png')
+		background-position: nth($orange-arrow-left, 1) nth($orange-arrow-left, 2)
+		width: nth($orange-arrow-left, 3)
+		height: nth($orange-arrow-left, 4)
+		display: block
+		margin: 30px auto
+	.carousel-next
+		background-image: url('/img/sprites/_general.png')
+		background-position: nth($orange-arrow-right, 1) nth($orange-arrow-right, 2)
+		width: nth($orange-arrow-right, 3)
+		height: nth($orange-arrow-right, 4)
+		display: block
+		margin: 30px auto
+
+	.carousel-control
+		z-index: 5
+	.logo20yearsImage
+		display: block
+		background-image: url('/img/sprites/_home.png')
+		background-position: nth($logo-20-years, 1) nth($logo-20-years, 2)
+		width: nth($logo-20-years, 3)
+		height: nth($logo-20-years, 4)
+@media screen and (max-width: 767px)
+	#carouselWidget 
+		.logo20yearsImage 
+			margin: 0 auto
+		.item
+			padding: 90px 0 0
+			text-align: center
+		h1
+			font-size: 40px
+			text-align: center
+			margin: 60px 0

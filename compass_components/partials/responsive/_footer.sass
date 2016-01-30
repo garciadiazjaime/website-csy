@@ -1,0 +1,60 @@
+/* *************** FOOTER - Responsive *************** */
+@media screen and (max-width: 991px)
+	#footer
+		h5
+			font-size: 12px
+
+@media screen and (max-width: 767px)
+	footer,  #footer
+		ul
+			padding: 0
+
+	#footerLogo
+		margin: 20px 0 30px
+
+	#footerCredits
+		padding: 18px 0 10px
+
+		.col-xs-12:last-child
+			padding-top: 15px
+			text-align: left
+
+	#addressColumn
+		text-align: left
+
+		p
+			max-width: 290px
+
+	#footerNavigation > ul > li:first-child
+		h5
+			a
+				display: inline-block
+
+@media screen and (max-width: 499px)
+	footer,  #footer
+		ul
+			padding: 0
+
+			ul
+				margin-bottom: 20px
+
+		li
+			width: 50%
+
+			li
+				display: block
+				width: 100%
+
+	#footerNavigation
+		& > ul > li
+			&:first-child, &:nth-child(2), &:nth-child(3), &:last-child
+				padding: 0
+				width: 50%
+
+			&:first-child
+				h5
+					a
+						&:before
+							width: 85px
+
+			&

@@ -1,0 +1,130 @@
+/* *************** WHAT WE DO - Responsive *************** */
+
+@media screen and (max-width: 991px)
+  #whatwedo
+    #banner
+      .banner_textbox
+        h1
+          margin: 100px 0
+          text-align: center
+
+    #intro
+      .right-column
+        ul
+          li
+            font-size: 30px
+
+    #services-menu
+      margin-top: 80px
+
+      #left-column
+        right: 50px
+        top: -52px
+
+        a
+          text-align: left
+
+      #right-column
+        left: 422px
+        top: -358px
+
+        a
+          padding-left: 0
+
+    #intro-services
+      font-size: 30px
+
+    #services-panel
+      .service-card.service-style-a
+        .service-no-background
+          background-color: $gray
+          border: 1px solid $gray
+
+        .service-content
+          border: none
+
+          .service-text
+            padding-left: 80px
+
+      .service-footer
+        border: 1px solid $gray
+
+      .service-card.service-style-b
+        .service-content
+          padding: 70px 55px 100px 135px
+
+    .service-image
+      border-top: 2px solid $blue
+
+@media screen and (max-width: 767px)
+  #whatwedo
+
+    #intro
+      padding: 40px 30px
+
+      h2
+        font-size: 35px
+
+    #intro-services
+      margin-top: 40px
+      padding: 82px 30px 0 30px
+
+      .right-column
+        &:before
+          display: none
+
+    .orange-text
+      margin-bottom: 20px
+      display: inline-block
+
+    .button
+      margin-bottom: 70px
+
+    #services-panel
+      padding-bottom: 40px 20px 0 35px
+
+      .service-card
+
+        a
+          float: right
+
+        h2
+          font-size: 35px
+          &:before
+            display: none
+
+        &.service-style-a
+          margin: 10px 0 0 0
+          .service-content
+            border-left: none
+            .service-text
+              padding: 40px 20px
+          .service-footer
+            padding-left: 0
+
+        b
+          display: block
+          margin: 0 0 40px
+
+          .service-content
+            border: none
+            .service-text
+              padding: 40px 15px
+
+        &.service-style-b
+          margin: 10px 0 0 0
+
+          .service-content
+            border: none
+            padding: 40px 20px 65px 50px
+
+          .service-aside
+            padding-right: 0
+
+            div
+              position: relative
+              height: 88px
+              background: $gray
+              width: 100%
+              text-align: center
+              padding: 25px 15px 0 0

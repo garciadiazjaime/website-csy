@@ -1,0 +1,221 @@
+/* ****************** HOME ************** */
+#home-section
+  h2
+    margin-top: 0
+    @extend %mentone-semibold
+    font-size: 40px
+  hr
+    margin: 50px 0
+    background: #F98C29
+    height: 4px
+    border: none
+    width: 70px
+#carouselWidget
+  #homeCarousel-slider1
+    background-image: url('/img/home/banner1.jpg')
+    background-size: cover
+
+  #homeCarousel-slider2
+    background-image: url('/img/home/banner2.jpg')
+    background-size: cover
+
+  #homeCarousel-slider3
+    background-image: url('/img/home/banner3.jpg')
+    background-size: cover
+
+    h1
+      font-size: 60px
+
+  #homeCarousel-slider4
+    background-image: url('/img/home/banner4.jpg')
+    background-size: cover
+
+  #homeCarousel-slider5
+    background-image: url('/img/home/banner5.jpg')
+    background-size: cover
+
+#introduction
+  overflow: visible
+  .white
+    padding: 50px
+    margin-top: -140px
+    @include box-shadow(3px 3px 29px rgba(0,0,0,.3))
+    background: #fff
+    span.introduction-icon
+      background-image: url('/img/sprites/_home.png')
+      background-position: nth($introduction-icon, 1) nth($introduction-icon, 2)
+      width: nth($introduction-icon, 3)
+      height: nth($introduction-icon, 4)
+      display: block
+      margin-right: 40px
+      vertical-align: top
+      display: inline-block
+    p
+      font-size: 18px
+      color: #333E48
+      line-height: 23px
+      margin: 50px 0
+    .button
+      color: #333E48
+      font-size: 13px
+      &:after
+        border-left: 5px solid #333E48
+  .bigPhrase
+    color: #333E48
+    font-size: 30px
+    line-height: 36px
+    @extend %mentone-semibold
+    margin: 100px 0 0 80px
+    width: 250px
+  .wemake
+    background: url('/img/home/wemake.jpg')
+    background-size: cover
+    min-height: 390px
+    margin: 0 -15px
+    display: block
+  .takecontrol
+    background: url('/img/home/takecontrol.jpg')
+    background-size: cover
+    min-height: 340px
+    display: block
+    margin: 0 -15px
+#homeServices
+  background: #333E48
+  margin-top: -300px
+  padding-top: 350px
+  overflow: visible
+  .container
+    background: #fff
+    ul
+      list-style: none
+      margin: 0 0 0 -15px
+      padding: 0
+    li
+      a
+        .iconHolder
+          background: #fff
+          display: block
+          float: left
+          margin-top: -75px
+          vertical-align: top
+          span
+            background-image: url('/img/sprites/_home.png')
+            height: nth($service-media, 4)
+            width: nth($service-media, 3)
+            margin: 10px
+            display: block
+
+        .textHolder
+          background: #FA8D29
+          display: block
+          margin-left: 74px
+          vertical-align: top
+          height: 75px
+          p
+            color: #fff
+            position: relative
+            top: 50%
+            @include translateY(-50%)
+            display: block
+            margin: 0
+            span
+              display: inline-block
+              width: 80%
+            &:before
+              content: ''
+              border-top: 5px solid transparent
+              border-left: 5px solid white
+              border-bottom: 5px solid transparent
+              display: inline-block
+              margin-right: 20px
+              vertical-align: middle
+        &:hover
+          .textHolder
+            background: #333E48
+      #homeServicesList-audio
+        .iconHolder
+          span
+            background-position: nth($service-audio, 1) nth($service-audio, 2)
+      #homeServicesList-video
+        .iconHolder
+          span
+            background-position: nth($service-video, 1) nth($service-video, 2)
+      #homeServicesList-media
+        .iconHolder
+          span
+            background-position: nth($service-media, 1) nth($service-media, 2)
+      #homeServicesList-communication
+        .iconHolder
+          span
+            background-position: nth($service-communication, 1) nth($service-communication, 2)
+      #homeServicesList-security
+        .iconHolder
+          span
+            background-position: nth($service-security, 1) nth($service-security, 2)
+      #homeServicesList-lighting
+        .iconHolder
+          span
+            background-position: nth($service-lighting, 1) nth($service-lighting, 2)
+      #homeServicesList-integration
+        .iconHolder
+          span
+            background-position: nth($service-integration, 1) nth($service-integration, 2)
+  .right_pane
+    padding: 75px 150px 0 95px
+    border-bottom: 180px solid white
+
+    hr
+      margin-top: 20px
+    p
+      color: #333E48
+      font-size: 15px
+      line-height: 23px
+      margin-bottom: 50px
+      @extend %sourcesanspro-regular
+
+    b
+      @extend %sourcesanspro-bold
+      display: block
+      padding-bottom: 50px
+
+    .button
+      color: #333E48
+      &:after
+        border-left: 5px solid #333E48
+  #closingPhrase
+    div
+      background: #5C6670
+      padding: 40px 180px 1px 115px
+      position: absolute
+      margin-left: -50px
+      margin-top: -105px
+      z-index: 10
+      p
+        color: #fffefd
+        @extend %mentone-semibold
+        font-size: 26px
+        line-height: 36px
+      hr
+        width: 240px
+        margin: 20px 0 50px
+#homeLocation
+  background: $blue
+
+  >div
+    padding: 330px 0 250px
+    color: #fff
+    position: relative
+
+  .container
+    &:before
+      background: url("/img/map_home.png") no-repeat
+      background-position: center center
+      content: ''
+      display: block
+      width: 879px
+      height: 705px
+      position: absolute
+      top: 116px
+      left: -130px
+
+@import "../responsive/_home"

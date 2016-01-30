@@ -1,0 +1,205 @@
+/* ****************** CONTACT ************** */
+#contact
+
+  h1
+    color: $orange
+
+  h2
+    color: $orange
+    font-size: 30px
+    padding: 0 0 10px 38px
+    @extend %mentone-semibold
+
+  #contactInfo
+
+    li
+      list-style: none
+
+    a
+      color: $gray
+      text-decoration: none
+
+    b
+      @extend %sourcesanspro-bold
+      color: $orange
+      font-size: 18px
+
+    .container
+      padding: 50px 0 100px
+
+      .contact-data
+        padding-left: 14px
+
+        p
+          position: relative
+          top: -26px
+          left: 45px
+
+#map
+  height: 535px
+  position: relative
+  margin: 20px 0 20px
+  background: url(#{$img}contact/map.jpg) center no-repeat
+  background-size: cover
+
+  &:after
+    @extend .sprite-contact
+    background-position: nth($icon-location, 1) nth($icon-location, 2)
+    width: nth($icon-location, 3)
+    height: nth($icon-location, 4)
+    position: absolute
+    top: 40%
+    left: 48.5%
+
+  a
+    display: block
+    height: 100%
+    opacity: 1
+    @include transition(.4s)
+    width: 100%
+
+    &:hover, &:focus, &:active
+      opacity: .7
+
+      span
+        background: $blue
+        @include transition(.4s)
+
+  span
+    background: $gray
+    border: none
+    bottom: 60px
+    color: white
+    display: block
+    font-size: 12px
+    left: 50%
+    margin: 0 0 0 -100px
+    padding: 9px 30px 9px 10px
+    position: absolute
+    @include transition(.4s)
+    width: 200px
+
+    &:after
+      border-top: 4px solid transparent
+      border-left: 4px solid white
+      border-bottom: 4px solid transparent
+      content: ""
+      display: block
+      height: 0
+      position: absolute
+      right: 10px
+      top: 15px
+      width: 0
+
+.formGroup
+  border-bottom: 1px solid $orange
+  position: relative
+  padding-bottom: 8px
+
+  input
+    background: white
+    border: none
+    height: 25px
+    padding: 2px 5px 2px 85px
+    position: relative
+    width: 100%
+    z-index: 1
+
+input
+  font-size: 11px
+
+label
+  color: #231f20
+  font-size: 12px
+  left: 0
+  position: absolute
+  top: 3px
+  z-index: 5
+
+label.static
+  display: block
+  position: static
+
+textarea
+  border: none
+  display: block
+  width: 84%
+  min-height: 80px
+  margin-left: 82px
+  font-size: 11px
+
+#contactForm
+
+  .col-xs-12
+    label
+      border-bottom: 1px solid #c6c6c6
+      display: block
+      margin-top: 4px
+      position: static
+
+    input
+      border: none
+      border-bottom: 1px solid #c6c6c6
+      padding-left: 5px
+      position: static
+      width: 100%
+
+#form
+  h2
+    padding: 0
+
+  p
+    @extend %sourcesanspro-regular
+    font-size: 16px
+    color: $blue
+    padding-bottom: 20px
+
+  label
+    @extend %sourcesanspro-bold
+    color: $orange
+    font-size: 16px
+
+
+
+#submitButton
+  background: white
+  border: 3px solid $orange
+  color: $blue
+  display: block
+  font-size: 16px
+  margin: 38px 0 15px auto
+  padding: 8px 20px 8px 10px
+  position: relative
+  @include transition(.4s)
+  width: 130px
+  text-transform: uppercase
+
+  &:after
+    border-top: 4px solid transparent
+    border-left: 4px solid $blue
+    border-bottom: 4px solid transparent
+    content: ""
+    display: block
+    height: 0
+    position: absolute
+    right: 15px
+    top: 13px
+    width: 0
+
+  &:hover, &:focus, &:active
+    @include transition(.4s)
+
+#msg
+  color: $gray
+  display: block
+  font: 10px Verdana, sans-serif
+  height: 15px
+  margin: 10px 0
+
+#msg.text-error, label.text-error
+  color: #aa1a21 !important
+
+#msg.text-success
+  color: #42895e !important
+
+@import "../responsive/_contact"

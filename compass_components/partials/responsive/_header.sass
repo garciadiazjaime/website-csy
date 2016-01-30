@@ -1,0 +1,87 @@
+/* *************** HEADER - Responsive *************** */
+
+/* -------- NAVIGATION --------- */
+@media screen and (max-width: 991px)
+  #header
+    &:before
+      margin: 0 170px 0 0
+
+  .navbar-nav
+    li
+      margin: 0 0 0 10px
+
+@media screen and (max-width: 767px)
+  #header
+    &:before
+      left: 0
+      margin: 0
+      width: 220px
+
+  header, #header
+    padding: 10px 0 0
+
+    .container
+      padding: 0
+
+    a
+      color: white
+
+    .navbar-nav
+      a
+        color: black
+        &:hover, &:focus, &:active
+          color: white
+
+  .navbar-toggle
+    margin: 30px 30px 50px 0
+
+  .navbar-nav
+    margin: 0
+    padding: 0
+
+    li
+      display: block
+      margin: 0
+
+    a
+      background: white
+      color: black
+      display: block
+
+      &:hover, &:focus, &:active
+        background: black
+        color: white
+
+  .navbar-default
+    .navbar-collapse
+      padding: 0
+
+    .navbar-nav > li > a:hover, .navbar-nav > li > a:focus
+      color: white
+
+  .navbar-default .navbar-nav > li > a
+    padding: 25px 0
+
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+    background: $blue
+
+  header.fixed, #header.fixed
+    .navbar-nav > li > a
+      padding: 25px 0
+
+    .navbar-toggle
+      margin: 0 30px 25px 0
+
+@media screen and (max-width: 349px)
+  header, #header, header.fixed, #header.fixed
+    min-height: 1px
+    padding: 10px 0 0
+
+    .navbar-brand
+      background-image: url('/img/sprites/_general.png')
+      background-position: nth($icon, 1) nth($icon, 2)
+      width: nth($icon, 3)
+      height: nth($icon, 4)
+
+    .navbar-toggle
+      margin: 0 30px 10px 0
