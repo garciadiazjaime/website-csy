@@ -14,10 +14,10 @@ Installation Steps
 * Create your branch (topics/feature)
 * Run `npm install`
 * Run `bower install`
-* Run `gulp build`
-* Run `gulp sprites`
 * Run `npm run dev`
-* Run `gulp watch` (another tab)
+* Run `npm run watch` (another tab)
+* Run `npm run build`
+* Run `npm run sprites`
 * Run `compass watch` (another tab)
 
 Notes
