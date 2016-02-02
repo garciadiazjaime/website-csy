@@ -40,8 +40,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "deploy": "gulp sprites && compass compile && gulp build && git add . && git commit -m 'build' && git push openshift HEAD:master",
-    "sprites": "gulp sprites"
+    "deploy": "./node_modules/.bin/gulp sprites && compass compile && ./node_modules/.bin/gulp build && git add . && git commit -m 'build' && git push openshift HEAD:master",
+    "sprites": "./node_modules/.bin/gulp sprites",
+    "watch": "./node_modules/.bin/gulp watch"
   },
   "browserify": {
     "transform": [

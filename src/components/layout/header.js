@@ -23,6 +23,7 @@ var HeaderSection = React.createClass({
 
     handleClick: function(page){
         this.transitionTo(page);
+        document.getElementsByClassName('navbar-toggle')[0].click()
     },
 
     render: function() {
